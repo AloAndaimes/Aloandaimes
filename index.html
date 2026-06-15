@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alô Andaimes Curitiba - Locação de Equipamentos para Construção</title>
     <style>
-        /* Cores da Identidade: Azul Escuro (#1A3B8B), Vermelho (#FF4136), Branco (#FFFFFF) */
+        /* Cores da Identidade Atualizadas: Azul Marinho (#0A1931), Vermelho (#E22222), Branco (#FFFFFF) */
         :root {
-            --azul-principal: #16337a;
-            --azul-escuro: #0f2354;
-            --vermelho: #ff3b30;
-            --vermelho-hover: #d62f27;
+            --azul-principal: #0A1931;
+            --azul-escuro: #050C1A;
+            --vermelho: #E22222;
+            --vermelho-hover: #B81414;
             --branco: #ffffff;
-            --cinza-claro: #f8f9fa;
-            --texto-escuro: #212529;
+            --cinza-claro: #f4f6f9;
+            --texto-escuro: #1A1A1A;
         }
 
         * {
@@ -32,7 +32,7 @@
         /* Cabeçalho */
         header {
             background-color: var(--branco);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -41,14 +41,14 @@
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 15px 20px;
+            padding: 12px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo img {
-            height: 60px; /* Ajuste conforme o arquivo final da logo */
+            height: 65px;
             display: block;
         }
 
@@ -61,7 +61,9 @@
         .nav-menu a {
             text-decoration: none;
             color: var(--azul-principal);
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
             transition: color 0.3s;
         }
 
@@ -71,39 +73,43 @@
 
         /* Banner Principal */
         .hero {
-            background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul-principal) 100%);
+            background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul-principal) 100%), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80');
+            background-blend-mode: overlay;
+            background-size: cover;
+            background-position: center;
             color: var(--branco);
-            padding: 80px 20px;
+            padding: 100px 20px;
             text-align: center;
         }
 
         .hero-container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin-bottom: 20px;
             font-weight: 800;
+            letter-spacing: -0.5px;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             margin-bottom: 35px;
-            opacity: 0.9;
+            opacity: 0.95;
         }
 
         .btn-whatsapp {
             display: inline-block;
             background-color: var(--vermelho);
             color: var(--branco);
-            padding: 15px 35px;
-            border-radius: 5px;
+            padding: 16px 38px;
+            border-radius: 4px;
             text-decoration: none;
             font-weight: bold;
             font-size: 1.1rem;
-            box-shadow: 0 4px 15px rgba(255, 59, 48, 0.4);
+            box-shadow: 0 4px 15px rgba(226, 34, 34, 0.4);
             transition: background-color 0.3s, transform 0.2s;
         }
 
@@ -124,16 +130,16 @@
             font-size: 2.2rem;
             color: var(--azul-principal);
             margin-bottom: 50px;
-            position: relative;
+            font-weight: 800;
         }
 
         .section-title::after {
             content: '';
             display: block;
-            width: 60px;
+            width: 70px;
             height: 4px;
             background-color: var(--vermelho);
-            margin: 10px auto 0 auto;
+            margin: 12px auto 0 auto;
             border-radius: 2px;
         }
 
@@ -145,29 +151,40 @@
 
         .card {
             background-color: var(--branco);
-            border: 1px solid #e1e8ed;
-            border-top: 5px solid var(--azul-principal);
-            border-radius: 8px;
-            padding: 25px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid #eef2f5;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-            border-top-color: var(--vermelho);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 20px rgba(10, 25, 49, 0.12);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .card-content {
+            padding: 22px;
         }
 
         .card h3 {
             color: var(--azul-principal);
-            font-size: 1.3rem;
-            margin-bottom: 12px;
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            font-weight: 700;
         }
 
         .card p {
             color: #555;
             font-size: 0.95rem;
+            line-height: 1.5;
         }
 
         /* Seção Diferenciais */
@@ -184,38 +201,56 @@
         .grid-diferenciais {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            gap: 40px;
             text-align: center;
+        }
+
+        .diferencial-item {
+            background: var(--branco);
+            padding: 30px 20px;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+
+        .diferencial-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: inline-block;
         }
 
         .diferencial-item h3 {
             color: var(--azul-principal);
-            margin-bottom: 10px;
-            font-size: 1.25rem;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+            font-weight: 700;
         }
 
         .diferencial-item p {
             color: #666;
+            font-size: 0.95rem;
         }
 
         /* CTA Final */
         .cta-final {
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
             background-color: var(--branco);
         }
 
         .cta-final h2 {
             color: var(--azul-principal);
-            margin-bottom: 20px;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 15px;
         }
 
         /* Rodapé */
         footer {
-            background-color: var(--azul-escuro);
+            background-color: var(--azul-principal);
             color: var(--branco);
-            padding: 40px 20px;
+            padding: 50px 20px;
             font-size: 0.95rem;
+            border-top: 4px solid var(--vermelho);
         }
 
         .footer-container {
@@ -225,12 +260,18 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 30px;
+        }
+
+        .footer-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--branco);
         }
 
         .footer-info p {
-            margin-bottom: 5px;
-            opacity: 0.8;
+            margin-bottom: 6px;
+            opacity: 0.85;
         }
 
         /* Responsividade */
@@ -240,7 +281,7 @@
                 gap: 15px;
             }
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             .footer-container {
                 flex-direction: column;
@@ -255,7 +296,6 @@
     <header>
         <div class="nav-container">
             <div class="logo">
-                <!-- Substitua pelo caminho da sua imagem se necessário -->
                 <img src="Logo AC.jpeg" alt="Alô Andaimes Curitiba">
             </div>
             <ul class="nav-menu">
@@ -270,9 +310,9 @@
     <!-- Banner Principal -->
     <section id="inicio" class="hero">
         <div class="hero-container">
-            <h1>Locação de Equipamentos para Construção Civil em Curitiba</h1>
-            <p>Agilidade na entrega, preço justo e a segurança que a sua obra precisa. Do andaime à lavadora de alta pressão, temos a solução ideal para o seu projeto.</p>
-            <a href="https://wa.me/SEU_NUMERO_AQUI" target="_blank" class="btn-whatsapp">Solicitar Orçamento no WhatsApp</a>
+            <h1>Locação de Equipamentos para Construção Civil</h1>
+            <p>Agilidade na entrega, preço justo e a segurança que a sua obra precisa. Do andaime tubular à lavadora de alta pressão, temos a solução ideal para o seu projeto.</p>
+            <a href="https://wa.me/5541997253858" target="_blank" class="btn-whatsapp">Solicitar Orçamento no WhatsApp</a>
         </div>
     </section>
 
@@ -282,43 +322,67 @@
         <div class="grid-equipamentos">
             
             <div class="card">
-                <h3>Andaimes Tubulares e Acessórios</h3>
-                <p>Estruturas tubulares práticas e seguras para trabalhos em altura. Alugamos também rodízios, sapatas reguláveis e pisos metálicos antiderrapantes.</p>
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=400&q=80" alt="Andaimes Tubulares" class="card-img">
+                <div class="card-content">
+                    <h3>Andaimes Tubulares</h3>
+                    <p>Estruturas tubulares práticas e altamente seguras para trabalhos em altura. Alugamos também rodízios, sapatas reguláveis e pisos metálicos antiderrapantes.</p>
+                </div>
             </div>
 
             <div class="card">
-                <h3>Escoras Metálicas</h3>
-                <p>Sustentação prática, segura e altamente resistente para lajes e vigas, garantindo o alinhamento perfeito da sua estrutura.</p>
+                <img src="https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=400&q=80" alt="Escoras Metálicas" class="card-img">
+                <div class="card-content">
+                    <h3>Escoras Metálicas</h3>
+                    <p>Sustentação prática, segura e altamente resistente para lajes e vigas, garantindo estabilidade e alinhamento perfeito na estrutura.</p>
+                </div>
             </div>
 
             <div class="card">
-                <h3>Betoneiras</h3>
-                <p>Equipamentos revisados para mistura homogênea de concreto e argamassa, aumentando drasticamente a produtividade da sua equipe.</p>
+                <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=400&q=80" alt="Betoneiras" class="card-img">
+                <div class="card-content">
+                    <h3>Betoneiras</h3>
+                    <p>Equipamentos revisados para mistura homogênea de concreto e argamassa, garantindo alta produtividade no canteiro de obras.</p>
+                </div>
             </div>
 
             <div class="card">
-                <h3>Placa Vibratória</h3>
-                <p>Ideal para a compactação de solos, valas, calçadas, sub-bases e assentamento de pisos intertravados (paver).</p>
+                <img src="https://images.unsplash.com/photo-1534224039826-c7a0dea0e66a?auto=format&fit=crop&w=400&q=80" alt="Placa Vibratória" class="card-img">
+                <div class="card-content">
+                    <h3>Placa Vibratória</h3>
+                    <p>Ideal para a compactação eficiente de solos, valas, calçadas, sub-bases e assentamento de pisos intertravados (paver).</p>
+                </div>
             </div>
 
             <div class="card">
-                <h3>Marteletes Rompedores</h3>
-                <p>Alta performance para demolição, quebra de concreto, remoção de pisos e aberturas de canaletas com o menor esforço.</p>
+                <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=400&q=80" alt="Marteletes Rompedores" class="card-img">
+                <div class="card-content">
+                    <h3>Marteletes Rompedores</h3>
+                    <p>Alta performance para demolições pesadas, quebra de concreto, remoção de pisos e aberturas de canaletas com facilidade.</p>
+                </div>
             </div>
 
             <div class="card">
-                <h3>Escadas Extensíveis</h3>
-                <p>Versatilidade, leveza e segurança para manutenções, pinturas e acessos rápidos em diferentes alturas.</p>
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=400&q=80" alt="Escadas Extensíveis" class="card-img">
+                <div class="card-content">
+                    <h3>Escadas Extensíveis</h3>
+                    <p>Versatilidade, leveza e total segurança para manutenções prediais, pinturas e acessos rápidos a locais elevados.</p>
+                </div>
             </div>
 
             <div class="card">
-                <h3>Lixadeiras de Teto e Parede</h3>
-                <p>Acabamento profissional, rápido e uniforme para gesso, massa corrida e rebocos, reduzindo o esforço manual e a poeira.</p>
+                <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=400&q=80" alt="Lixadeiras de Teto" class="card-img">
+                <div class="card-content">
+                    <h3>Lixadeiras de Teto e Parede</h3>
+                    <p>Acabamento profissional rápido e uniforme para massas e rebocos, reduzindo drasticamente o esforço manual e a poeira na obra.</p>
+                </div>
             </div>
 
             <div class="card">
-                <h3>Lavadoras de Alta Pressão</h3>
-                <p>Equipamentos de linha profissional ideais para limpeza pós-obra, lavagem de fachadas, calçadas e remoção de sujeiras pesadas.</p>
+                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=400&q=80" alt="Lavadoras de Alta Pressão" class="card-img">
+                <div class="card-content">
+                    <h3>Lavadoras de Alta Pressão</h3>
+                    <p>Limpeza pós-obra pesada e eficiente. Ideal para fachadas, calçadas residenciais e comerciais e remoção de crostas de sujeira.</p>
+                </div>
             </div>
 
         </div>
@@ -330,26 +394,29 @@
             <h2 class="section-title">Por que escolher a Alô Andaimes Curitiba?</h2>
             <div class="grid-diferenciais">
                 <div class="diferencial-item">
-                    <h3>⚙️ Equipamentos Revisados</h3>
-                    <p>Manutenção preventiva rigorosa antes de cada entrega para garantir o andamento da sua obra.</p>
+                    <span class="diferencial-icon">⚙️</span>
+                    <h3>Equipamentos Revisados</h3>
+                    <p>Manutenção preventiva rigorosa antes de cada entrega para garantir que sua obra nunca pare por falhas.</p>
                 </div>
                 <div class="diferencial-item">
-                    <h3>🚚 Logística Ágil</h3>
-                    <p>Pontualidade na entrega e na retirada diretamente no seu canteiro de obras.</p>
+                    <span class="diferencial-icon">🚚</span>
+                    <h3>Logística Ágil</h3>
+                    <p>Pontualidade e compromisso na entrega e retirada das ferramentas diretamente no seu canteiro.</p>
                 </div>
                 <div class="diferencial-item">
-                    <h3>🛡️ Segurança Garantida</h3>
-                    <p>Equipamentos confiáveis e alinhados com o que o mercado exige para a proteção dos operários.</p>
+                    <span class="diferencial-icon">🛡️</span>
+                    <h3>Segurança Garantida</h3>
+                    <p>Maquinários robustos e totalmente confiáveis para dar tranquilidade e proteção à sua equipe.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Final antes do rodapé -->
+    <!-- CTA Final -->
     <section id="contato" class="cta-final">
         <h2>Pronto para iniciar ou acelerar a sua obra?</h2>
-        <p style="margin-bottom: 25px; color: #555;">Fale com a nossa equipe agora mesmo e garanta os melhores equipamentos com preço justo.</p>
-        <a href="https://wa.me/SEU_NUMERO_AQUI" target="_blank" class="btn-whatsapp">Fale Conosco no WhatsApp</a>
+        <p style="margin-bottom: 30px; color: #555; font-size: 1.1rem;">Fale com a nossa equipe agora mesmo e garanta as melhores soluções com o melhor custo-benefício.</p>
+        <a href="https://wa.me/5541997253858" target="_blank" class="btn-whatsapp">Fale Conosco no WhatsApp</a>
     </section>
 
     <!-- Rodapé -->
@@ -357,8 +424,9 @@
         <div class="footer-container">
             <div class="footer-info">
                 <h4>Alô Andaimes Curitiba</h4>
-                <p>Atendimento rápido em Curitiba e Região Metropolitana.</p>
-                <p>Contato: (41) XXXX-XXXX</p>
+                <p>📍 Rua Darwin, 651 - Atuba, Colombo - PR</p>
+                <p>📞 WhatsApp: (41) 99725-3858 | ☎️ Fixo: (41) 3675-0092</p>
+                <p>🚚 Atendemos Curitiba, Região Metropolitana e demais regiões sob consulta.</p>
             </div>
             <div>
                 <p>&copy; 2026 Alô Andaimes Curitiba. Todos os direitos reservados.</p>
