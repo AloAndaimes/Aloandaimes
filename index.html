@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alô Andaimes Curitiba - Locação de Equipamentos para Construção</title>
     <style>
-        /* Cores da Identidade Atualizadas: Azul Marinho (#0A1931), Vermelho (#E22222), Branco (#FFFFFF) */
+        /* Cores da Identidade: Azul Marinho (#0A1931), Vermelho (#E22222), Branco (#FFFFFF) */
         :root {
             --azul-principal: #0A1931;
             --azul-escuro: #050C1A;
@@ -14,6 +14,7 @@
             --branco: #ffffff;
             --cinza-claro: #f4f6f9;
             --texto-escuro: #1A1A1A;
+            --instagram: #E1306C;
         }
 
         * {
@@ -55,7 +56,8 @@
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 25px;
+            gap: 20px;
+            align-items: center;
         }
 
         .nav-menu a {
@@ -71,9 +73,20 @@
             color: var(--vermelho);
         }
 
+        .btn-insta-top {
+            background-color: var(--instagram);
+            color: white !important;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem !important;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
         /* Banner Principal */
         .hero {
-            background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul-principal) 100%), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80');
+            background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul-principal) 100%), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80');
             background-blend-mode: overlay;
             background-size: cover;
             background-position: center;
@@ -165,9 +178,9 @@
 
         .card-img {
             width: 100%;
-            height: 190px;
+            height: 220px;
             object-fit: cover;
-            background-color: #eee;
+            background-color: #f0f0f0;
         }
 
         .card-content {
@@ -274,6 +287,22 @@
             opacity: 0.85;
         }
 
+        .btn-insta-footer {
+            display: inline-block;
+            background-color: var(--instagram);
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: opacity 0.3s;
+        }
+
+        .btn-insta-footer:hover {
+            opacity: 0.9;
+        }
+
         /* Responsividade */
         @media (max-width: 768px) {
             .nav-container {
@@ -303,6 +332,7 @@
                 <li><a href="#equipamentos">Equipamentos</a></li>
                 <li><a href="#diferenciais">Diferenciais</a></li>
                 <li><a href="#contato">Contato</a></li>
+                <li><a href="https://www.instagram.com/aloandaimescuritiba?igsh=OThsdTJzZDlpcmZ1" target="_blank" class="btn-insta-top">📸 Instagram</a></li>
             </ul>
         </div>
     </header>
@@ -322,66 +352,66 @@
         <div class="grid-equipamentos">
             
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=400&q=80" alt="Andaimes Tubulares" class="card-img">
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=500&q=80" alt="Andaimes Tubulares" class="card-img">
                 <div class="card-content">
                     <h3>Andaimes Tubulares</h3>
-                    <p>Estruturas tubulares práticas e altamente seguras para trabalhos em altura. Alugamos também rodízios, sapatas reguláveis e pisos metálicos antiderrapantes.</p>
+                    <p>Estruturas tubulares de ferro reforçadas, práticas e altamente seguras para trabalhos em altura. Alugamos também rodízios, sapatas reguláveis e pisos metálicos antiderrapantes.</p>
                 </div>
             </div>
 
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=400&q=80" alt="Escoras Metálicas" class="card-img">
+                <img src="https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=500&q=80" alt="Escoras Metálicas" class="card-img">
                 <div class="card-content">
                     <h3>Escoras Metálicas</h3>
-                    <p>Sustentação prática, segura e altamente resistente para lajes e vigas, garantindo estabilidade e alinhamento perfeito na estrutura.</p>
+                    <p>Sustentação prática, segura e altamente resistente através de escoras de ferro reguláveis para lajes e vigas, garantindo estabilidade perfeita.</p>
                 </div>
             </div>
 
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=400&q=80" alt="Betoneiras" class="card-img">
+                <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=500&q=80" alt="Betoneiras" class="card-img">
                 <div class="card-content">
                     <h3>Betoneiras</h3>
-                    <p>Equipamentos revisados para mistura homogênea de concreto e argamassa, garantindo alta produtividade no canteiro de obras.</p>
+                    <p>Equipamentos elétricos e traçados revisados para mistura homogênea de concreto e argamassa, garantindo alta produtividade no canteiro.</p>
                 </div>
             </div>
 
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=400&q=80" alt="Placa Vibratória" class="card-img">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=500&q=80" alt="Placa Vibratória" class="card-img">
                 <div class="card-content">
                     <h3>Placa Vibratória</h3>
-                    <p>Ideal para a compactação eficiente de solos, valas, calçadas, sub-bases e assentamento de pisos intertravados (paver).</p>
+                    <p>Compactadora de solo mecânica ideal para a compactação eficiente de solos, valas, calçadas, sub-bases e assentamento de paver.</p>
                 </div>
             </div>
 
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=400&q=80" alt="Marteletes Rompedores" class="card-img">
+                <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=500&q=80" alt="Marteletes Rompedores" class="card-img">
                 <div class="card-content">
                     <h3>Marteletes Rompedores</h3>
-                    <p>Alta performance para demolições pesadas, quebra de concreto, remoção de pisos e aberturas de canaletas com facilidade.</p>
+                    <p>Martelete elétrico de alta performance para demolições, quebra de concreto, remoção de pisos e aberturas de canaletas com facilidade.</p>
                 </div>
             </div>
 
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=400&q=80" alt="Escadas Extensíveis" class="card-img">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=500&q=80" alt="Escadas Extensíveis" class="card-img">
                 <div class="card-content">
                     <h3>Escadas Extensíveis</h3>
-                    <p>Versatilidade, leveza e total segurança para manutenções prediais, pinturas e acessos rápidos a locais elevados.</p>
+                    <p>Versatilidade, leveza e total segurança com escadas de alumínio extensíveis para manutenções prediais e acessos rápidos.</p>
                 </div>
             </div>
 
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=400&q=80" alt="Lixadeiras de Teto" class="card-img">
+                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=500&q=80" alt="Lixadeiras" class="card-img">
                 <div class="card-content">
                     <h3>Lixadeiras de Teto e Parede</h3>
-                    <p>Acabamento profissional rápido e uniforme para massas e rebocos, reduzindo drasticamente o esforço manual e a poeira na obra.</p>
+                    <p>Equipamento mecânico para acabamento profissional rápido e uniforme em massas e rebocos, reduzindo drasticamente o esforço manual.</p>
                 </div>
             </div>
 
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=400&q=80" alt="Lavadoras de Alta Pressão" class="card-img">
+                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=500&q=80" alt="Lavadoras de Alta Pressão" class="card-img">
                 <div class="card-content">
                     <h3>Lavadoras de Alta Pressão</h3>
-                    <p>Limpeza pós-obra pesada e eficiente. Ideal para fachadas, calçadas residenciais e comerciais e remoção de crostas de sujeira.</p>
+                    <p>Limpeza pós-obra pesada e eficiente com lavadora de alta pressão profissional. Ideal para fachadas e remoção de crostas de sujeira.</p>
                 </div>
             </div>
 
@@ -427,6 +457,7 @@
                 <p>📍 Rua Darwin, 651 - Atuba, Colombo - PR</p>
                 <p>📞 WhatsApp: (41) 99725-3858 | ☎️ Fixo: (41) 3675-0092</p>
                 <p>🚚 Atendemos Curitiba, Região Metropolitana e demais regiões sob consulta.</p>
+                <a href="https://www.instagram.com/aloandaimescuritiba?igsh=OThsdTJzZDlpcmZ1" target="_blank" class="btn-insta-footer">Siga-nos no Instagram</a>
             </div>
             <div>
                 <p>&copy; 2026 Alô Andaimes Curitiba. Todos os direitos reservados.</p>
