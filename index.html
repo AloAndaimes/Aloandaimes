@@ -202,6 +202,7 @@
             box-shadow: 0 12px 20px rgba(10, 25, 49, 0.12);
         }
 
+        /* Regra padrão para imagens cortadas esteticamente (como Andaimes/Escoras) */
         .card-img {
             width: 100%;
             height: 220px;
@@ -209,10 +210,10 @@
             background-color: #f8f9fa;
         }
 
-        /* Ajuste exclusivo para a betoneira não parecer ter "zoom" */
-        .img-betoneira {
+        /* Regra exclusiva para exibir as ferramentas INTEIRAS sem zoom ou cortes */
+        .img-enquadrada {
             object-fit: contain;
-            padding: 10px;
+            padding: 12px;
             background-color: #ffffff;
         }
 
@@ -405,48 +406,52 @@
                 </div>
             </div>
 
-            <!-- CARD DA BETONEIRA ATUALIZADO (Sem o efeito de zoom) -->
+            <!-- BETONEIRA (Enquadrada) -->
             <div class="card">
-                <img src="betoneira.jfif" alt="Betoneiras" class="card-img img-betoneira" onerror="this.src='betoneira.JFIF'">
+                <img src="betoneira.jfif" alt="Betoneiras" class="card-img img-enquadrada" onerror="this.src='betoneira.JFIF'">
                 <div class="card-content">
                     <h3>Betoneiras</h3>
                     <p>Equipamentos elétricos e traçados revisados para mistura homogênea de concreto e argamassa, garantindo alta produtividade no canteiro.</p>
                 </div>
             </div>
 
+            <!-- PLACA VIBRATÓRIA (Enquadrada) -->
             <div class="card">
-                <img src="placa.webp" alt="Placa Vibratória" class="card-img" onerror="this.src='placa.WEBP'; this.onerror=function(){this.src='placa.jfif'}">
+                <img src="placa.webp" alt="Placa Vibratória" class="card-img img-enquadrada" onerror="this.src='placa.WEBP'; this.onerror=function(){this.src='placa.jfif'}">
                 <div class="card-content">
                     <h3>Placa Vibratória</h3>
                     <p>Compactadora de solo mecânica ideal para a compactação eficiente de solos, valas, calçadas, sub-bases e assentamento de paver.</p>
                 </div>
             </div>
 
+            <!-- MARTELETE (Enquadrado) -->
             <div class="card">
-                <img src="martelete.jfif" alt="Marteletes Rompedores" class="card-img" onerror="this.src='martelete.JFIF'">
+                <img src="martelete.jfif" alt="Marteletes Rompedores" class="card-img img-enquadrada" onerror="this.src='martelete.JFIF'">
                 <div class="card-content">
                     <h3>Marteletes Rompedores</h3>
                     <p>Martelete elétrico de alta performance para demolições, quebra de concreto, remoção de pisos e aberturas de canaletas com facilidade.</p>
                 </div>
             </div>
 
+            <!-- VIBRADOR DE CONCRETO (Enquadrado) -->
             <div class="card">
-                <img src="vibrador.jfif" alt="Vibrador de Concreto" class="card-img" onerror="this.src='vibrador.JFIF'">
+                <img src="vibrador.jfif" alt="Vibrador de Concreto" class="card-img img-enquadrada" onerror="this.src='vibrador.JFIF'">
                 <div class="card-content">
                     <h3>Vibrador de Concreto</h3>
                     <p>Ideal para a eliminação de bolhas de ar e adensamento perfeito do concreto, garantindo a máxima resistência em colunas, vigas e lajes.</p>
                 </div>
             </div>
 
+            <!-- ESCADA EXTENSÍVEL (Enquadrada) -->
             <div class="card">
-                <img src="escada.jfif" alt="Escadas Extensíveis" class="card-img" onerror="this.src='escada.JFIF'">
+                <img src="escada.jfif" alt="Escadas Extensíveis" class="card-img img-enquadrada" onerror="this.src='escada.JFIF'">
                 <div class="card-content">
                     <h3>Escadas Extensíveis</h3>
                     <p>Versatilidade, leveza e total segurança com escadas de alumínio extensíveis para manutenções prediais e acessos rápidos.</p>
                 </div>
             </div>
 
-            <!-- CARD DA LIXADEIRA ATUALIZADO (Com caminhos corrigidos para o jfif) -->
+            <!-- LIXADEIRA (Ajustada com correções) -->
             <div class="card">
                 <img src="lixadeira.jfif" alt="Lixadeiras" class="card-img" onerror="this.src='lixadeira.JFIF'; this.onerror=function(){this.src='Lixadeira.jfif'; this.onerror=function(){this.src='Lixadeira.JFIF'}}}">
                 <div class="card-content">
@@ -455,8 +460,9 @@
                 </div>
             </div>
 
+            <!-- LAVADORA DE ALTA PRESSÃO (Enquadrada) -->
             <div class="card">
-                <img src="lavadora.webp" alt="Lavadoras de Alta Pressão" class="card-img" onerror="this.src='lavadora.WEBP'; this.onerror=function(){this.src='lavadora.jfif'}">
+                <img src="lavadora.webp" alt="Lavadoras de Alta Pressão" class="card-img img-enquadrada" onerror="this.src='lavadora.WEBP'; this.onerror=function(){this.src='lavadora.jfif'}">
                 <div class="card-content">
                     <h3>Lavadoras de Alta Pressão</h3>
                     <p>Limpeza pós-obra pesada e eficiente com lavadora de alta pressão profissional. Ideal para fachadas e remoção de crostas de sujeira.</p>
