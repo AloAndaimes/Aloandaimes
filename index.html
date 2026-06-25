@@ -84,27 +84,42 @@
             gap: 5px;
         }
 
-        /* Banner Principal - Fundo Branco Integrado com a Logo */
+        /* Banner Principal - Agora com a imagem "Fundo site.png" suavizada */
         .hero {
+            position: relative;
             background-color: var(--branco);
             color: var(--texto-escuro);
             padding: 60px 20px 80px 20px;
             text-align: center;
+            overflow: hidden;
+        }
+
+        /* Camada de fundo para aplicar a imagem com opacidade perfeita para leitura */
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('Fundo site.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.25; /* Deixa os respingos visíveis, mas sem atrapalhar as letras */
+            z-index: 1;
         }
 
         .hero-container {
+            position: relative;
             max-width: 850px;
             margin: 0 auto;
+            z-index: 2; /* Garante que o texto e a logo fiquem por cima do fundo */
         }
 
-        /* Estilo Otimizado para Deixar a Logo Maior e mais Nítida */
+        /* Estilo Otimizado para a Logo Oficial */
         .hero-logo {
             width: 100%;
-            max-width: 450px; /* Aumentado significativamente */
+            max-width: 450px;
             height: auto;
             margin-bottom: 20px;
             display: inline-block;
-            /* Truque de renderização para melhorar nitidez visual */
             image-rendering: -webkit-optimize-contrast;
             image-rendering: crisp-edges;
         }
@@ -115,12 +130,14 @@
             font-weight: 800;
             letter-spacing: -0.5px;
             color: var(--azul-principal);
+            text-shadow: 0 1px 2px rgba(255,255,255,0.8); /* Ajuda a destacar no fundo */
         }
 
         .hero p {
             font-size: 1.25rem;
             margin-bottom: 35px;
-            color: #555;
+            color: #222;
+            font-weight: 600;
         }
 
         .btn-whatsapp {
@@ -324,7 +341,7 @@
                 font-size: 2rem;
             }
             .hero-logo {
-                max-width: 300px; /* Tamanho ajustado para telas de celular */
+                max-width: 300px;
             }
             .footer-container {
                 flex-direction: column;
@@ -351,7 +368,7 @@
         </div>
     </header>
 
-    <!-- Banner Principal - Agora 100% Branco e Integrado com a Logo Maior -->
+    <!-- Banner Principal - Agora com o Fundo de Respingos Otimizado -->
     <section id="inicio" class="hero">
         <div class="hero-container">
             <img src="Logo AC.jpeg" alt="Alô Andaimes" class="hero-logo">
