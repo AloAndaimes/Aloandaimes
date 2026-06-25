@@ -84,7 +84,7 @@
             gap: 5px;
         }
 
-        /* Banner Principal - Agora com a imagem "Fundo site.png" suavizada */
+        /* Banner Principal - Fundo "fundo site2.png" */
         .hero {
             position: relative;
             background-color: var(--branco);
@@ -94,15 +94,14 @@
             overflow: hidden;
         }
 
-        /* Camada de fundo para aplicar a imagem com opacidade perfeita para leitura */
         .hero::before {
             content: "";
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url('Fundo site.png');
+            background-image: url('fundo site2.png');
             background-size: cover;
             background-position: center;
-            opacity: 0.25; /* Deixa os respingos visíveis, mas sem atrapalhar as letras */
+            opacity: 0.2;
             z-index: 1;
         }
 
@@ -110,10 +109,9 @@
             position: relative;
             max-width: 850px;
             margin: 0 auto;
-            z-index: 2; /* Garante que o texto e a logo fiquem por cima do fundo */
+            z-index: 2;
         }
 
-        /* Estilo Otimizado para a Logo Oficial */
         .hero-logo {
             width: 100%;
             max-width: 450px;
@@ -130,7 +128,7 @@
             font-weight: 800;
             letter-spacing: -0.5px;
             color: var(--azul-principal);
-            text-shadow: 0 1px 2px rgba(255,255,255,0.8); /* Ajuda a destacar no fundo */
+            text-shadow: 0 1px 3px rgba(255,255,255,0.9);
         }
 
         .hero p {
@@ -138,6 +136,7 @@
             margin-bottom: 35px;
             color: #222;
             font-weight: 600;
+            text-shadow: 0 1px 2px rgba(255,255,255,0.9);
         }
 
         .btn-whatsapp {
@@ -207,7 +206,14 @@
             width: 100%;
             height: 220px;
             object-fit: cover;
-            background-color: #f0f0f0;
+            background-color: #f8f9fa;
+        }
+
+        /* Ajuste exclusivo para a betoneira não parecer ter "zoom" */
+        .img-betoneira {
+            object-fit: contain;
+            padding: 10px;
+            background-color: #ffffff;
         }
 
         .card-content {
@@ -368,7 +374,7 @@
         </div>
     </header>
 
-    <!-- Banner Principal - Agora com o Fundo de Respingos Otimizado -->
+    <!-- Banner Principal -->
     <section id="inicio" class="hero">
         <div class="hero-container">
             <img src="Logo AC.jpeg" alt="Alô Andaimes" class="hero-logo">
@@ -399,8 +405,9 @@
                 </div>
             </div>
 
+            <!-- CARD DA BETONEIRA ATUALIZADO (Sem o efeito de zoom) -->
             <div class="card">
-                <img src="betoneira.jfif" alt="Betoneiras" class="card-img" onerror="this.src='betoneira.JFIF'">
+                <img src="betoneira.jfif" alt="Betoneiras" class="card-img img-betoneira" onerror="this.src='betoneira.JFIF'">
                 <div class="card-content">
                     <h3>Betoneiras</h3>
                     <p>Equipamentos elétricos e traçados revisados para mistura homogênea de concreto e argamassa, garantindo alta produtividade no canteiro.</p>
@@ -439,8 +446,9 @@
                 </div>
             </div>
 
+            <!-- CARD DA LIXADEIRA ATUALIZADO (Com caminhos corrigidos para o jfif) -->
             <div class="card">
-                <img src="lixadeira.jfif" alt="Lixadeiras" class="card-img" onerror="this.src='Lixadeira.jfif'; this.onerror=function(){this.src='lixadeira.JFIF'; this.onerror=function(){this.src='Lixadeira.JFIF'}}}">
+                <img src="lixadeira.jfif" alt="Lixadeiras" class="card-img" onerror="this.src='lixadeira.JFIF'; this.onerror=function(){this.src='Lixadeira.jfif'; this.onerror=function(){this.src='Lixadeira.JFIF'}}}">
                 <div class="card-content">
                     <h3>Lixadeiras de Teto e Parede</h3>
                     <p>Equipamento mecânico para acabamento profissional rápido e uniforme em massas e rebocos, reduzindo drasticamente o esforço manual.</p>
